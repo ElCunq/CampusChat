@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Giriş</title>
+        <link rel="stylesheet" href="giris.css">
+    </head>
+
+    <body>
+
+        <div class="login-container">
+
+            <h1>Giriş Yap</h1>
+
+            <form action="{{ url_for('giris') }}"  method="POST">
+
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="mail" id="email" name="email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Şifre:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <a href="{{ url_for('index') }}"><button type="submit">Giriş Yap</button></a>
+                
+            </form>
+
+        </div>
+
+    </body>
+</html>
